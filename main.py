@@ -1,4 +1,4 @@
-a=input("请输入一串字符：")
+a=input()
 N=len(a)
 english=0#英文字符个数
 numbers=0#数字个数
