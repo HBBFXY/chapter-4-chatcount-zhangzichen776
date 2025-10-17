@@ -1,29 +1,17 @@
-# 初始化计数器
-letter_count = 0    # 英文字符计数
-digit_count = 0     # 数字计数
-space_count = 0     # 空格计数
-other_count = 0     # 其他字符计数
-
-# 获取输入
-input_str = input()
-
-# 遍历每个字符进行分类统计
-for char in input_str:
-    # 判断是否为英文字符（a-z, A-Z）
-    if ('a' <= char <= 'z') or ('A' <= char <= 'Z'):
-        letter_count += 1
-    # 判断是否为数字（0-9）
-    elif '0' <= char <= '9':
-        digit_count += 1
-    # 判断是否为空格
-    elif char.isspace():
-        space_count += 1
-    # 其余均为其他字符（包括中文、标点、特殊符号等）
+a=input("请输入一串字符：")
+N=len(a)
+english=0#英文字符个数
+numbers=0#数字个数
+space=0#空格个数
+extra=0#其他字符个数
+a=a.lower()
+for i in range(0,N):
+    if a[i]>="a"and a[i]<="z":#此行也可以改成：if a[i].islower():
+        english+=1
+    elif a[i].isnumeric():
+        numbers+=1
+    elif a[i].isspace():
+        space+=1
     else:
-        other_count += 1
-
-# 按要求格式输出结果
-print(f"英文字符: {letter_count}")
-print(f"数字: {digit_count}")
-print(f"空格: {space_count}")
-print(f"其他字符: {other_count}")
+        extra+=1
+print("英文字符个数：{}\t数字个数：{}\t空格个数：{}\t其他字符个数：{}".format(english,numbers,space,extra),end="")
