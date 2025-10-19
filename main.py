@@ -14,7 +14,7 @@ for i in range(0,N):
         space+=1
     else:
         extra+=1
-print(f"英文字符个数：{english}")
-print(f"数字个数：{numbers}")
-print(f"空格个数：{space}")
-print(f"其他字符个数：{extra}")
+print(f"英文字符：{english}")
+print(f"数字：{numbers}")
+print(f"空格：{space}")
+print(f"其他字符：{extra}")
